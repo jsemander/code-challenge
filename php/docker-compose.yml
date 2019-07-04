@@ -1,0 +1,10 @@
+version: "3.2"
+services:
+  app:
+    build: .
+    environment:
+      XDEBUG_CONFIG: remote_host=host.docker.internal remote_port=9000 remote_enable=1
+    ports:
+      - "8080:80"
+    volumes:
+        - './:/var/www/html'
