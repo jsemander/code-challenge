@@ -1,0 +1,42 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "linterOptions": {
+        "exclude": [
+          "test/*.spec.ts"
+        ]
+    },
+    "jsRules": {
+        "max-line-length": {
+            "options": [170]
+        }
+    },
+    "rules": {
+        "eofline": true,
+        "indent": [true, "spaces", 4],
+        "interface-name": [false],
+        "linebreak-style": [true, "LF"],
+        "max-line-length": [true, { "ignore-pattern": "\\s\\*", "limit": 170 }],
+        "no-console": [false, "log", "error"],
+        "no-empty": [false],
+        "no-empty-interface": [false],
+        "no-reference": false,
+        "no-trailing-whitespace": [true, "ignore-comments", "ignore-blank-lines"],
+        "no-unused-vars": ["warn"],
+        "object-literal-key-quotes": [true, "as-needed"],
+        "quotemark": [true, "single"],
+        "semicolon": [true, "always"],
+        "trailing-comma": [true, {
+            "multiline": {
+                "arrays": "always",
+                "functions": "always",
+                "objects": "always",
+                "typeLiterals": "ignore"
+            },
+            "esSpecCompliant": true
+        }]
+    },
+    "rulesDirectory": []
+}

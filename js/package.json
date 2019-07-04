@@ -1,0 +1,53 @@
+{
+  "name": "code-challenge",
+  "version": "0.0.0",
+  "description": "The javascript version of the code challenge",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jsemander/affiliate-api.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "docs": "apidoc -i src/ -o docs",
+    "lint": "tslint --project tsconfig.json",
+    "test": "nyc mocha --require ts-node/register test/*.spec.ts --exit"
+  },
+  "author": "John Semander <jsemander@gmail.com>",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/lodash": "^4.14.135",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^8.10.39",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.12.1",
+    "typescript": "^3.2.4"
+  },
+  "nyc": {
+    "all": true,
+    "check-coverage": true,
+    "extension": [
+      ".js",
+      ".jsx",
+      ".ts",
+      ".tsx"
+    ],
+    "exclude": [
+      "**/*.spec.ts"
+    ],
+    "include": [
+      "src/**/*.ts"
+    ],
+    "reporter": [
+      "html",
+      "text"
+    ]
+  }
+}
