@@ -41,7 +41,7 @@ final class PaydateCalculator
         if (empty($directDeposit)) {
             $dueDate = strtotime('+1 day', $dueDate);
         }
-        // Check until due date is not on a holidy or weekend
+        // Check until due date is not on a holiday or weekend
         do {
             // Check if due date is on a holiday
             $isHoliday = in_array($dueDate, $holidayArray, true);
@@ -57,6 +57,7 @@ final class PaydateCalculator
         } while ($isHoliday || $isWeekend);
         // Check if the due date is gte 10 days from the fund date
         if ($dueDate >= strtotime('+10 days', $fundDate)) {
+            // Return due date
             return $dueDate;
         } else {
             // Continue to next pay date
