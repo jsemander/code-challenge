@@ -6,7 +6,7 @@ phpive
 ## Install dependencies
 phive install
 
-# Generate Autoloader
+## Generate Autoloader
 ./tools/phpab -c -o src/autoload.inc.php src
 
 ## Unit Testing
